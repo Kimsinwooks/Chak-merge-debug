@@ -1,0 +1,91 @@
+.env
+backend/.env
+*.pem
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+node_modules/
+dist/
+.vite/
+.next/
+
+backend/data/
+backend/uploads/
+backend/tmp/
+backend/temp/
+backend/.venv/
+.venv/
+
+*.sqlite3
+*.sqlite3-*
+*.db
+*.log
+
+.DS_Store
+.vscode/
+
+# local secrets
+backend/.env
+.env
+
+# local DB / generated data
+backend/data/
+backend/*.sqlite3
+backend/**/*.sqlite3
+backend/*.db
+backend/**/*.db
+
+# generated reports / uploaded files
+backend/data/filled_hwp_reports/
+backend/data/chunks/
+backend/data/uploads/
+*.hwp
+*.hwpx
+*.docx
+
+# python/node cache
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+dist/
+.vite/
+
+# playwright
+playwright-report/
+test-results/
+workspace-ui/playwright/.auth/
+
+# secrets
+.env
+backend/.env
+
+# local data / DB
+backend/data/
+*.sqlite3
+*.db
+
+# generated files
+*.hwp
+*.hwpx
+*.docx
+backend/data/filled_hwp_reports/
+backend/data/chunks/
+backend/data/uploads/
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# node
+node_modules/
+dist/
+.vite/
+
+# playwright
+playwright-report/
+test-results/
+workspace-ui/playwright/.auth/

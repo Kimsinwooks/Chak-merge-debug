@@ -1,0 +1,55 @@
+fastapi
+# 웹 서버 프레임워크
+# → /stt/upload, /mindmap 같은 API 엔드포인트를 만들기 위해 사용
+
+uvicorn
+# FastAPI 실행 서버 (ASGI 서버)
+# → uvicorn main:app --reload 로 서버 실행할 때 필요
+
+faster-whisper
+# 음성 → 텍스트 변환(STT) 핵심 모델
+# → Whisper 기반인데 더 빠르고 효율적인 구현
+
+pyannote.audio
+# 화자 분리 (누가 말했는지 구분)
+# → "익명1", "익명2" 같은 speaker 구분에 사용
+
+torch
+# 딥러닝 연산 라이브러리 (GPU/CPU 실행)
+# → Whisper, pyannote 둘 다 내부적으로 필요
+
+webrtcvad
+# 음성 활동 감지 (VAD)
+# → 말하는 구간 vs 침묵 구간 구분
+# → 타임라인에서 "발화 X" 만드는 핵심
+
+pydantic
+# 요청 데이터 검증 및 구조 정의
+# → FastAPI에서 JSON body를 class로 받기 위해 사용
+
+authlib
+httpx
+itsdangerous
+python-dotenv
+requests
+python-multipart
+soundfile
+
+##cd backend
+##uvicorn main:app --reload
+##uvicorn main:app --reload --port 8000
+##curl http://localhost:8000/docs 로 접속(브라우저에서)
+
+## cd C:\0504_\Chak\backend 
+## .\.venv\Scripts\python.exe -m uvicorn api:app --reload --port 8000
+
+
+##테이블 초기화
+# DELETE FROM transcript_segments;
+# DELETE FROM vad_events;
+# DELETE FROM transcript_sessions;
+# DELETE FROM realtime_chunks;
+
+##완전 초기화
+# rm stt.sqlite3
+# uvicorn main:app --reload
